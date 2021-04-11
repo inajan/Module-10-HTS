@@ -16,3 +16,5 @@ Source "RNA" (SARS-CoV-2 is an RNA virus)
 File type "fastq"
 
 SELECT ANY LINK THEY WANT AFTER THAT?
+
+Use SRA DUMP? Part of Conda?
