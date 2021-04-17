@@ -5,10 +5,17 @@
 
 
 ## Logging on to the server
-For this part of the course we will be using a common server with a Linux operating system. Using such Linux servers is common in bioinformatics. This gives you access to powerful computers with lots of storage space and you don't need to worry about loosing your data. Depending on your operating system there are different ways to log on to the server:  
+For this part of the course we will be using a common server with a Linux operating system. Using such Linux servers is common in bioinformatics and gives you access to powerful computers with lots of storage space. And you don't need to worry about loosing your data. Depending on your operating system there are different ways to log on to the server:  
 
-**Mac/Linux**
-If you have a Mac or a Linux PC, these already run on a Linux-like OS and you can open a program called the **Terminal**. The Terminal gives you access to all Linux commands. Type either: `ssh username@itf-appn-test01.hpc.uio.no` or `ssh username@itf-appn-test02.hpc.uio.no` (replace *username* with your UiO username) and hit Enter. Type in your UiO password (NB: you will not see anything happen when you type. This is normal).
+**Mac/Linux**  
+If you have a Mac or a Linux PC, these already run on a Linux-like OS and you can open a program called the **Terminal**. The Terminal gives you access to all Linux commands. Type either: `ssh username@itf-appn-test01.hpc.uio.no` or `ssh username@itf-appn-test02.hpc.uio.no` (replace *username* with your UiO username) and hit Enter. Type in your UiO password (NB: you will not see anything happen when you type. This is normal).  
+
+![Terminal](/images/terminal.png)
+
+
+**Windows**
+
+
 [Back to top](#contents)
 
 ## Installing and using software on a Linux system
