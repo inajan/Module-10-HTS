@@ -17,7 +17,10 @@ On windows we recommend that you install [GitBash](https://gitforwindows.org/). 
 
 You can also use [Putty](https://putty.org/) to log on, but this will not let you use unix-commands locally. In Putty, just enter the name of the server in "Host Name" and click "Open" (press "Accept" if you get a security alert). Then write your UiO username after "login as" and then your password (you will not see anything typing).  
 
-<img src="/images/putty.png" width="600" height="300">
+<img src="/images/putty.png" width="600" height="300">  
+
+When you have logged on to the server, type the command `pwd`. You should see something like this
+<img src="/images/terminal_2.png" width="600" height="300">  
 
 [Back to top](#contents)
 
