@@ -10,11 +10,14 @@ For this part of the course we will be using a common server with a Linux operat
 **Mac/Linux**  
 If you have a Mac or a Linux PC, these already run on a Linux-like OS and you can open a program called the **Terminal**. The Terminal gives you access to all Linux commands. Type either: `ssh username@itf-appn-test01.hpc.uio.no` or `ssh username@itf-appn-test02.hpc.uio.no` (replace *username* with your UiO username) and hit Enter. Type in your UiO password (NB: you will not see anything happen when you type. This is normal).  
 
-![Terminal](/images/terminal.png)
+<img src="/images/terminal.png" width="600" height="300">
 
+**Windows**  
+On windows we recommend that you install [GitBash](https://gitforwindows.org/). This gives you a terminal with unix-style commands available on your local machine. You can then log on to the server with the same commands as above.  
 
-**Windows**
+You can also use [Putty](https://putty.org/) to log on, but this will not let you use unix-commands locally. In Putty, just enter the name of the server in "Host Name" and click "Open" (press "Accept" if you get a security alert). Then write your UiO username after "login as" and then your password (you will not see anything typing).  
 
+<img src="/images/putty.png" width="600" height="300">
 
 [Back to top](#contents)
 
