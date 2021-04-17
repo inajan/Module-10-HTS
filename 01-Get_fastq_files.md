@@ -21,3 +21,7 @@ File type "fastq"
 SELECT ANY LINK THEY WANT AFTER THAT?
 
 Use SRA DUMP? Part of Conda?
+
+Use basic Unix commands to inspect the fastq-files and answer the questions:  
+!How many lines does each file consist of?  
+!And how many sequences are that?
