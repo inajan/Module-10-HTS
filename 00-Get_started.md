@@ -36,7 +36,7 @@ In these exercises we will use Conda to install the necessary software for us. C
 It's good practice to have different "conda environments" for different projects. These environments will contain only the software that you need for that specific project. For these exercises we will create a Conda environment called "HTS". We specify what kinds of software we want in an "environment file". 
 
 ```
-cp /storage/jonbra/BIOS3010/HTS/environment.yml .
+cp /storage/BIOS3010/jonbra/HTS/environment.yml .
 cat environment.yml
 ```
 
