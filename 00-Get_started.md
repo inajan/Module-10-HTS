@@ -60,5 +60,8 @@ conda env create -f environment.yml
 ```
 This installs the necessary software and you only need to run this command once. 
 
-To activate the environment run `conda activate HTS`.  
+To activate the environment run `conda activate HTS`.   
+
+You should now have the command `fastqc` available. Try typing `fas` and then use autocomplete. What happens?  
+
 [Back to top](#contents)
