@@ -28,7 +28,9 @@ Si noen ord om at vi skal finne data. Det er flere måter å finne HTS data på.
 Go to the NCBI web page [https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/)
 
 ## Download data to the server 
-Click on the file starting with "SRR...". This takes you to the SRA run browser. Here you can see more information about the data files. Click on the tab "Data access". Here you can find download links to the two paired fastq files (these are gzipped so they end with the extension .gz). 
+Click on the file starting with "SRR...". This takes you to the SRA run browser. Here you can see more information about the data files. Click on the tab "Data access". Here you can find download links to the two paired fastq files (these are gzipped so they end with the extension .gz):  
+
+<img src="/images/sra_run_browser.png" width="700" height="500">   
 
 Right click on the first link to the fastq file (ending in .gz) and copy the link. Go to the server and type the command `wget` and paste the link. Something like this: `wget https://sra-download.ncbi.nlm.nih.gov/traces/sra2/SRZ/014289/SRR14289348/TX-UTA-000521_L001_R1.fastq.gz`. Hit enter. This should download the first fastq file. Do the same for the second. After this is done type `ls`. Do you have two new files ending with `.gz`?
 
