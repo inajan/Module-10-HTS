@@ -1,3 +1,5 @@
+# Contents 
+
 ## Find data  
 As you have probably learned, there are many databases for HTS data. The two most common and comprehensive are probably [ENA - the Europoean Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/home) and the [NCBI SRA database](https://www.ncbi.nlm.nih.gov/sra).
 
@@ -25,8 +27,12 @@ Answer these questions:
 Si noen ord om at vi skal finne data. Det er flere måter å finne HTS data på. De har sikkert lært om databaser. Vi skal bruke NCBI i dag. 
 Go to the NCBI web page [https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/)
 
-## Download data to the server  
+## Download data to the server 
+
+### Download directly to the server  
 `/storage/BIOS3010/jonbra/HTS/sratoolkit.2.11.0-centos_linux64/bin/fastq-dump --split-files SRR14253446`
+
+### Download via your computer  
 De kan velge om de vil bruke wget, WinSCP eller FileZilla eller hvilken som helst annen metode. 
 NCBI har en egen samleside for Corona-data. (click on the link called "SARS-CoV-2 data (NCBI)".
 
