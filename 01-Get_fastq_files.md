@@ -15,10 +15,10 @@ Click on one of the results. Probably called something with "PCR tiled amplifica
 
 Answer these questions:  
 ```diff
-! What does "paired" library layot mean? 
+! What does "paired" library layout mean? 
 ! How many sequence files can you expect from "paired" data?
-! What is the "Run" accession for the sample you have selected (begins with SRR...)? Write it down.
-! "Spots" is the number of sequenced reads (it refers to the read clusters on the sequencing array). Write down how many reads (spots) have been sequenced for your sample and the size of the file.
+! What is the "Run" accession for the sample you have selected? (begins with SRR...). Write it down.
+! "Spots" is the number of sequenced reads (it refers to the read clusters on the sequencing array). Write down how many reads (spots) have been sequenced for your sample and the size of the files.
 ````
 
 
