@@ -1,4 +1,7 @@
 # Contents 
+- [Find data](#find-data)
+- [Download data to the server](#download-data-to-the-server)
+- [Inspect the fastq files](#inspect-the-fastq-files)
 
 ## Find data  
 As you have probably learned, there are many databases for HTS data. The two most common and comprehensive are probably [ENA - the Europoean Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/home) and the [NCBI SRA database](https://www.ncbi.nlm.nih.gov/sra).
@@ -22,8 +25,9 @@ Answer these questions:
 ! How many sequence files can you expect from "paired" data?
 ! What is the "Run" accession for the sample you have selected? (begins with SRR...). Write it down.
 ! "Spots" is the number of sequenced reads (it refers to the read clusters on the sequencing array). Write down how many reads (spots) have been sequenced for your sample and the size of the file.
-````
+````  
 
+[Back to top](#contents)
 
 ## Download data to the server 
 Click on the file starting with "SRR...". This takes you to the SRA run browser. Here you can see more information about the data files. Click on the tab "Data access". Here you can find download links to the two paired fastq files:  
@@ -32,7 +36,11 @@ Click on the file starting with "SRR...". This takes you to the SRA run browser.
 
 Click [here](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR14253446) if you can't find the right links.  
 
-Right click on the first link to the fastq file (ending with .gz) and copy the link. Go to the server and type the command `wget` and paste the link. Something like this: `wget https://sra-download.ncbi.nlm.nih.gov/traces/sra2/SRZ/014289/SRR14289348/TX-UTA-000521_L001_R1.fastq.gz`. Hit enter. This should download the first fastq file. Do the same for the second. After this is done type `ls`. You should now have two new files ending with `.fastq`.
+Right click on the first link to the fastq file (ending with .gz) and copy the link. Go to the server and type the command `wget` and paste the link. Something like this: `wget https://sra-download.ncbi.nlm.nih.gov/traces/sra2/SRZ/014289/SRR14289348/TX-UTA-000521_L001_R1.fastq.gz`. Hit enter. This should download the first fastq file. Do the same for the second. After this is done type `ls`. You should now have two new files ending with `.fastq`.  
+
+[Back to top](#contents)
+
+## Inspect the fastq files
 
 Use basic Linux commands and your knowledge about the fastq file forma to answer the following questions (and save screen shots of how you found the answer):
 ```diff
@@ -44,28 +52,3 @@ See [this table](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/
 ```diff
 ! Can you trust that this nucleotide has been called correctly?
 ```
-
-
-
-### Download directly to the server  
-`/storage/BIOS3010/jonbra/HTS/sratoolkit.2.11.0-centos_linux64/bin/fastq-dump --split-files SRR14253446`
-
-### Download via your computer  
-De kan velge om de vil bruke wget, WinSCP eller FileZilla eller hvilken som helst annen metode. 
-NCBI har en egen samleside for Corona-data. (click on the link called "SARS-CoV-2 data (NCBI)".
-
-We will go to the SRA database of NCBI. The Short Read Archive. Scroll down to find the link called "SARS-CoV-2 next-generation sequencing runs in SRA". SI TO ORD OM SRA.
-
-TWO WORDS ABOUT THE LEFT SIDE. ASK THE STUDENTS TO EXPLORE THE DIFFERENT DATA TYPES. HVA ER DET DE KJENNER IGJEN FRA FORELESNINGEN?
-
-STILLE NOEN SPØRSMÅL OM DATA TYPES SOM DE MÅ SVARE PÅ I OPPGAVENE.
-
-
-
-SELECT ANY LINK THEY WANT AFTER THAT?
-
-Use SRA DUMP? Part of Conda?
-
-Use basic Unix commands to inspect the fastq-files and answer the questions:  
-!How many lines does each file consist of?  
-!And how many sequences are that?
