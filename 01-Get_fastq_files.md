@@ -26,13 +26,19 @@ Answer these questions:
 
 
 ## Download data to the server 
-Click on the file starting with "SRR...". This takes you to the SRA run browser. Here you can see more information about the data files. Click on the tab "Data access". Here you can find download links to the two paired fastq files (these are gzipped so they end with the extension .gz):  
+Click on the file starting with "SRR...". This takes you to the SRA run browser. Here you can see more information about the data files. Click on the tab "Data access". Here you can find download links to the two paired fastq files:  
 
 <img src="/images/sra_run_browser.png" width="700" height="500">   
 
 Click [here](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR14253446) if you can't find the right links.  
 
-Right click on the first link to the fastq file (ending with .gz) and copy the link. Go to the server and type the command `wget` and paste the link. Something like this: `wget https://sra-download.ncbi.nlm.nih.gov/traces/sra2/SRZ/014289/SRR14289348/TX-UTA-000521_L001_R1.fastq.gz`. Hit enter. This should download the first fastq file. Do the same for the second. After this is done type `ls`. Do you have two new files ending with `.gz`?
+Right click on the first link to the fastq file (ending with .gz) and copy the link. Go to the server and type the command `wget` and paste the link. Something like this: `wget https://sra-download.ncbi.nlm.nih.gov/traces/sra2/SRZ/014289/SRR14289348/TX-UTA-000521_L001_R1.fastq.gz`. Hit enter. This should download the first fastq file. Do the same for the second. After this is done type `ls`. You should now have two new files ending with `.fastq`.
+
+Use basic Linux commands and your knowledge about the fastq file forma to answer the following questions (and save screen shots of how you found the answer):
+```diff
+! How may lines does the two fastq files contain?
+! How many paired reads are in your files? Does this match with the number you found in the previous exercise?
+````
 
 ### Download directly to the server  
 `/storage/BIOS3010/jonbra/HTS/sratoolkit.2.11.0-centos_linux64/bin/fastq-dump --split-files SRR14253446`
