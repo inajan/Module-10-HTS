@@ -13,7 +13,7 @@ Source "RNA" (SARS-CoV-2 is an RNA virus)
 File type "fastq"  
 Strategy "other"  
 
-Click on one of the results. Probably called something with "PCR tiled amplification" (the SARS-CoV-2 genome is usually amplified with a PCR protocol).  
+Click on one of the results. Probably called something with "PCR tiled amplification" (the SARS-CoV-2 genome is usually amplified with a PCR protocol) (Click [here](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR14253446) if you have trouble):    
 
 Answer these questions:  
 ```diff
