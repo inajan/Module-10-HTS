@@ -4,6 +4,8 @@
 - [Inspect the fastq files](#inspect-the-fastq-files)
 
 ## Find data  
+First, make sure you have done the instructions described in [00-Get_started.md](00-Get_started.md) and that the "HTS" conda environment is active.  
+
 As you have probably learned, there are many databases for HTS data. The two most common and comprehensive are probably [ENA - the Europoean Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/home) and the [NCBI SRA database](https://www.ncbi.nlm.nih.gov/sra).
 
 We will use SRA today and download some public HTS data from SARS-CoV-2. Click on the link above to get to the main page. There is a separate SARS-CoV-2 version of the database. Find the link called "SARS-CoV-2 data (NCBI)" at the top of the page, in the pink region. Then click on the link on the middle of the page with a number and "SRA runs" under it. You should now be on a page looking something like this (if not, click [here](https://www.ncbi.nlm.nih.gov/sra/?term=txid2697049%5BOrganism:noexp%5D%20NOT%200[Mbases)):  
@@ -52,3 +54,16 @@ See [this table](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/
 ```diff
 ! Can you trust that this nucleotide has been called correctly?
 ```
+
+Now we will run the program [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) which is a quick and easy way to get basic statistics and lots of useful information about our sequence data. Simply run the command `fastqc SRR*.fastq` (you know what the wildcard (\*) does right?)  
+
+You should see an output like this:  
+```
+Started analysis of SRR14253446_1.fastq
+Approx 5% complete for SRR14253446_1.fastq
+Approx 10% complete for SRR14253446_1.fastq
+Approx 15% complete for SRR14253446_1.fastq
+Approx 20% complete for SRR14253446_1.fastq
+```
+  
+FastQC will produce two types of files. html files and zip files. We only need the html files. But since we can't view these files in the terminal you need to download them to your computer. 
