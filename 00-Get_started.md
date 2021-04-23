@@ -8,7 +8,7 @@
 For this part of the course we will be using a common server with a Linux operating system. Using such Linux servers is common in bioinformatics and gives you access to powerful computers with lots of storage space. And you don't need to worry about loosing your data. Depending on your operating system there are different ways to log on to the server:  
 
 **Mac/Linux**  
-If you have a Mac or a Linux PC, these already run on a Linux-like OS and you can open a program called the **Terminal**. The Terminal gives you access to all Linux commands. Type either: `ssh username@itf-appn-test01.hpc.uio.no` or `ssh username@itf-appn-test02.hpc.uio.no` (replace *username* with your UiO username) and hit Enter. Type in your UiO password (NB: you will not see anything happen when you type. This is normal).  
+If you have a Mac or a Linux PC, these already run on a Linux-like OS and you can open a program called the **Terminal**. The Terminal gives you access to all Linux commands. Type either: `ssh username@itf-appn-test01.hpc.uio.no` (group 1-5 do this) or `ssh username@itf-appn-test02.hpc.uio.no` (group 6-10 do this). Replace *username* with your UiO username and hit Enter. Type in your UiO password (NB: you will not see anything happen when you type. This is normal).  
 
 <img src="/images/terminal.png" width="600" height="300">
 
@@ -33,11 +33,12 @@ It is common these days to use so-called "package managers", software that can h
 ## Setting up your working environment
 In these exercises we will use Conda to install the necessary software for us. Conda is already installed on the server, so just type `module load Anaconda3/2020.11` to activate it. If you now type `cond` and then press the TAB-button, the command `conda` should be "auto completed" (auto completion is the cornerstone of working in a Linux system. You simply *must* be able to know and use the TAB-button if you want to do bioinformatics). If you press TAB twice you should see other available commands starting with `conda`.  
 
-It's good practice to have different "conda environments" for different projects. These environments will contain only the software that you need for that specific project. For these exercises we will create a Conda environment called "HTS". We specify what kinds of software we want in an "environment file". 
+It's good practice to have different "conda environments" for different projects. These environments will contain only the software that you need for that specific project. For these exercises we will create a Conda environment called "HTS". We specify what kinds of software we want in an "environment file".  
 
+Run these commands:
 ```
-cp /storage/BIOS3010/jonbra/HTS/environment.yml .
-cat environment.yml
+cp /storage/BIOS3010/jonbra/HTS/environment.yml .  # copy the conda environment file from my shared directory
+cat environment.yml # display the content of the file
 ```
 
 You should see something like this:
@@ -50,18 +51,20 @@ channels:
 
 dependencies:
     - fastqc=0.11.9
+    - trimmomatic=0.39
 ```
+These are instructions that tells Conda to create an environment named "HTS" and that it should install the software fastqc version 0.11.9 and trimmomatic version 0.39 and that it can find these in the conda channels "defaults" and "bioconda".   
 
-These are instructions that tells Conda to create an environment named "HTS" and that it should install the software "fastqc" version 0.11.9 and that it can find this software in the channels "defaults" and "bioconda".   
-
-To create the environment run:
+You now need to create the environment. *You only have to do this once.* Run this command:  
 ```
 conda env create -f environment.yml
 ```
-This installs the necessary software and you only need to run this command once. 
+ 
 
-To activate the environment run `conda activate HTS`.   
+Now you can activate the conda environment by typing `conda activate HTS`.   
 
 You should now have the command `fastqc` available. Try typing `fas` and then use autocomplete. What happens?  
+
+To deactivate the environment type `conda deactivate`. Fastqc and trimmomatic will no longer be available. 
 
 [Back to top](#contents)
