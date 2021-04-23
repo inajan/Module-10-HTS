@@ -1,6 +1,6 @@
 ## FastQC
 
-## Cut adapt
+## Trimmomatic
 
 ## FastQC again
 
