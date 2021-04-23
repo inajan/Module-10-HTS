@@ -11,9 +11,9 @@ Library layout "paired"
 Platform "Illumina"  
 Source "RNA" (SARS-CoV-2 is an RNA virus)  
 File type "fastq"  
-Strategy "other"  
+Strategy "Genome"  
 
-Click on one of the results. Probably called something with "PCR tiled amplification" (the SARS-CoV-2 genome is usually amplified with a PCR protocol).
+Click on one of the results. Probably called something called "Whole genome sequencing of SARS-CoV-2".
 
 Answer these questions:  
 ```diff
