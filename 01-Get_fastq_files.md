@@ -38,7 +38,14 @@ Use basic Linux commands and your knowledge about the fastq file forma to answer
 ```diff
 ! How may lines does the two fastq files contain?
 ! How many paired reads are in your files? Does this match with the number you found in the previous exercise?
+! What is the quality symbol (ASCII character) for the first nucleotide in the first read in the SRR..._1.fastq file?
 ````
+See [this table](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/Source/Informatics/BS/QualityScoreEncoding_swBS.htm)   
+```diff
+! Can you trust that this nucleotide has been called correctly?
+```
+
+
 
 ### Download directly to the server  
 `/storage/BIOS3010/jonbra/HTS/sratoolkit.2.11.0-centos_linux64/bin/fastq-dump --split-files SRR14253446`
