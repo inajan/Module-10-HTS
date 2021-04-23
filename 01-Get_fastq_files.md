@@ -13,7 +13,7 @@ Source "RNA" (SARS-CoV-2 is an RNA virus)
 File type "fastq"  
 Strategy "other"  
 
-Click on one of the results. Probably called something with "PCR tiled amplification" (the SARS-CoV-2 genome is usually amplified with a PCR protocol) (Click [here](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR14253446) if you have trouble):    
+Click on one of the results. Probably called something with "PCR tiled amplification" (the SARS-CoV-2 genome is usually amplified with a PCR protocol) (Click [here](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR14253446) if you have trouble finding any relevant data):    
 
 Answer these questions:  
 ```diff
@@ -23,9 +23,6 @@ Answer these questions:
 ! "Spots" is the number of sequenced reads (it refers to the read clusters on the sequencing array). Write down how many reads (spots) have been sequenced for your sample and the size of the file.
 ````
 
-
-Si noen ord om at vi skal finne data. Det er flere måter å finne HTS data på. De har sikkert lært om databaser. Vi skal bruke NCBI i dag. 
-Go to the NCBI web page [https://www.ncbi.nlm.nih.gov/](https://www.ncbi.nlm.nih.gov/)
 
 ## Download data to the server 
 Click on the file starting with "SRR...". This takes you to the SRA run browser. Here you can see more information about the data files. Click on the tab "Data access". Here you can find download links to the two paired fastq files (these are gzipped so they end with the extension .gz):  
