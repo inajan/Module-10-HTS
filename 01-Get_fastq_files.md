@@ -13,7 +13,8 @@ Source "RNA" (SARS-CoV-2 is an RNA virus)
 File type "fastq"  
 Strategy "other"  
 
-Click on one of the results. Probably called something with "PCR tiled amplification" (the SARS-CoV-2 genome is usually amplified with a PCR protocol) (Click [here](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR14253446) if you have trouble finding any relevant data):    
+Click on one of the results. Probably called something with "PCR tiled amplification" (the SARS-CoV-2 genome is usually amplified with a PCR protocol) (Click [here](https://www.ncbi.nlm.nih.gov/sra/?term=SRR14253446) if you have trouble finding any relevant data):  
+
 
 Answer these questions:  
 ```diff
@@ -29,7 +30,9 @@ Click on the file starting with "SRR...". This takes you to the SRA run browser.
 
 <img src="/images/sra_run_browser.png" width="700" height="500">   
 
-Right click on the first link to the fastq file (ending in .gz) and copy the link. Go to the server and type the command `wget` and paste the link. Something like this: `wget https://sra-download.ncbi.nlm.nih.gov/traces/sra2/SRZ/014289/SRR14289348/TX-UTA-000521_L001_R1.fastq.gz`. Hit enter. This should download the first fastq file. Do the same for the second. After this is done type `ls`. Do you have two new files ending with `.gz`?
+Click [here](https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR14253446) if you can't find the right links.  
+
+Right click on the first link to the fastq file (ending with .gz) and copy the link. Go to the server and type the command `wget` and paste the link. Something like this: `wget https://sra-download.ncbi.nlm.nih.gov/traces/sra2/SRZ/014289/SRR14289348/TX-UTA-000521_L001_R1.fastq.gz`. Hit enter. This should download the first fastq file. Do the same for the second. After this is done type `ls`. Do you have two new files ending with `.gz`?
 
 ### Download directly to the server  
 `/storage/BIOS3010/jonbra/HTS/sratoolkit.2.11.0-centos_linux64/bin/fastq-dump --split-files SRR14253446`
