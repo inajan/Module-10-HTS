@@ -61,7 +61,7 @@ Not all the information here is relevant for us today. But look at the informati
 
 ## Remove adapters and low quality bases  
 
-The next thing we need to do is to remove sequencing adapters and low quality bases. We will use a program called [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) for this task. Run the following command (it's long so you can copy and paste, **but change the SRR-number**):
+The next thing we need to do is to remove sequencing adapters and low quality bases. We will use a program called [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) for this task. Run the following command (it's long so you can copy and paste. Copy all lines together. **But change the SRR-number**):
 
 ```bash
 trimmomatic PE SRR14253446_1.fastq SRR14253446_2.fastq \
