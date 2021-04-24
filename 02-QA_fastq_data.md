@@ -84,6 +84,7 @@ Trimmomatic will print some information about the run to the screen.
 ```  
 
 <br>  
+
 **Run FastQC again on the trimmed reads and download the resulting html files to your computer.**  
 
 
