@@ -81,8 +81,9 @@ Trimmomatic will print some information about the run to the screen.
 ```diff
 ! How many paired reads are present after trimming?
 ! How many sequences were removed?
-```
+```  
 
+<br>  
 **Run FastQC again on the trimmed reads and download the resulting html files to your computer.**  
 
 
