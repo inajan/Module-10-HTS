@@ -66,7 +66,7 @@ Approx 15% complete for SRR14253446_1.fastq
 Approx 20% complete for SRR14253446_1.fastq
 ```
   
-FastQC will produce two types of files. `.html` files and `.zip` files. We only need the html files. But since we can't view these files in the terminal you need to download them to your computer. If you have a windows machine and use Putty instead of GitBash you should download [WinSCP](https://winscp.net/eng/download.php) to transfer the files. If you have GitBash, or you have a Mac or Linux machine, you need to open a new terminal window. In this window you will be on your local computer. 
+FastQC will produce two types of files. `.html` files and `.zip` files. We only need the html files. But since we can't view these files in the terminal you need to download them to your computer. If you have a windows machine and use Putty instead of GitBash you should download [WinSCP](https://winscp.net/eng/download.php) to transfer the files (download and install the program and log on to the server similar to what you did in Putty). If you have GitBash, or you have a Mac or Linux machine, you need to open a new terminal window. In this window you will be on your local computer. 
 
 First, on the server terminal, type `pwd` to display the path to you location. Then, in the other terminal window which is on your local machine, type the following command (replace *username* with your uio username (group 6-10 use test02 instead of test01) and *path/to/fastq/file* with the output from `pwd`):    
 
