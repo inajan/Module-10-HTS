@@ -27,9 +27,7 @@ ssh username@login.uio.no
 ```
 
 Replace *username* with your UiO username and hit Enter. Type in your UiO password (NB: you will not see anything happen when you type. This is normal).
-
-<img src="/images/terminal.png" width="600" height="300">
-
+<img src="/images/terminal.png"> <p>
 You should see a message `Welcome to login.uio.no!`
 
 Next, see below under "Logging on to the course server".
@@ -41,12 +39,12 @@ You can also use [Putty](https://putty.org/) to log on, but this will not let yo
 
 * enter the name of the server in "Host Name"
 
-<img src="/images/putty.png" width="250">  
+<img src="/images/putty.png" width="250"> <p>  
 
   * click "Open"
 * press "Accept" if you get a security alert
 
-<img src="/images/putty2.png" width="250">  
+<img src="/images/putty2.png" width="250"> <p>  
 
 * write your UiO username after "login as" and then your password (you will not see anything typing).
 
@@ -62,7 +60,7 @@ Once you are logged in to `login.uio.no`, you can log in to the course server:
 Again, write your password when asked for it.
 
 When you have logged on to the server, type the command `pwd`. You should see something like this
-<img src="/images/terminal_2.png" width="500" height="300">  
+<img src="/images/terminal_2.png" width="500" height="300"> <p>  
 
 [Back to top](#contents)
 
