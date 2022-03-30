@@ -40,12 +40,12 @@ You can also use [Putty](https://putty.org/) to log on, but this will not let yo
 
 * enter the name of the server in "Host Name"
 
-<img src="/images/putty.png" width="250"> <p>  
+<img src="/images/putty.png" width="500"> <p>  
 
   * click "Open"
 * press "Accept" if you get a security alert
 
-<img src="/images/putty2.png" width="250"> <p>  
+<img src="/images/putty2.png" width="500"> <p>  
 
 * write your UiO username after "login as" and then your password (you will not see anything typing).
 
