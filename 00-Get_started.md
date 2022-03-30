@@ -27,7 +27,8 @@ ssh username@login.uio.no
 ```
 
 Replace *username* with your UiO username and hit Enter. Type in your UiO password (NB: you will not see anything happen when you type. This is normal).
-<img src="/images/terminal.png"> <p>
+
+<img src="/images/terminal.png" witdh="200"> <p>
 You should see a message `Welcome to login.uio.no!`
 
 Next, see below under "Logging on to the course server".
