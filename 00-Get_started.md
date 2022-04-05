@@ -36,19 +36,6 @@ Next, see below under "Logging on to the course server".
 **Windows**  
 On windows we recommend that you install [GitBash](https://gitforwindows.org/). This gives you a terminal with unix-style commands available on your local machine. You can then log on to the `login.uio.no` server with the same commands as above.  
 
-You can also use [Putty](https://putty.org/) to log on, but this will not let you use unix-commands locally. In Putty,
-
-* enter the name of the server in "Host Name"
-
-<img src="/images/putty.png" width="500"> <p>  
-
-  * click "Open"
-* press "Accept" if you get a security alert
-
-<img src="/images/putty2.png" width="500"> <p>  
-
-* write your UiO username after "login as" and then your password (you will not see anything typing).
-
 You should see a message `Welcome to login.uio.no!`
 
 ## Logging on to the course server
