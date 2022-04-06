@@ -16,34 +16,42 @@ See [this table](https://support.illumina.com/help/BaseSpace_OLH_009008/Content/
 ```
 <br>
 
-Now we will run the program [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) which is a quick and easy way to get basic statistics and lots of useful information about our sequence data. Simply run the command `fastqc SRR*.fastq` (you know what the wildcard (\*) does right?)  
+Now we will run the program [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) which is a quick and easy way to get basic statistics and lots of useful information about our sequence data. Run the command `fastqc TX-UTA-000336_L001_R*.fastq` (you know what the wildcard (`*`) does right?)  
 
 You should see an output like this:  
 ```
-Started analysis of SRR14253446_1.fastq
-Approx 5% complete for SRR14253446_1.fastq
-Approx 10% complete for SRR14253446_1.fastq
-Approx 15% complete for SRR14253446_1.fastq
-Approx 20% complete for SRR14253446_1.fastq
+Started analysis of TX-UTA-000336_L001_R1.fastq
+Approx 5% complete for TX-UTA-000336_L001_R1.fastq
+Approx 10% complete for TX-UTA-000336_L001_R1.fastq
+Approx 15% complete for TX-UTA-000336_L001_R1.fastq
+Approx 20% complete for TX-UTA-000336_L001_R1.fastq
+...
 ```
 
-FastQC will produce two types of files. `.html` files and `.zip` files. We only need the html files. But since we can't view these files in the terminal you need to download them to your computer (you also did this in [Module 5](https://github.com/BIOS3010/Module-5-multiple-alignment#533-moving-files-from-an-external-server-to-your-own-computer)). If you have a windows machine and use Putty instead of GitBash you should download [WinSCP](https://winscp.net/eng/download.php) to transfer the files (download and install the program. Log on to the server similar to how you did in Putty). If you have GitBash, or you have a Mac or Linux machine, you need to open a new terminal window. In the newly opened terminal window you will be on your local computer.  
+FastQC will produce two types of files. `.html` files and `.zip` files. We only need the html files. But since we can't view these files in the terminal you need to download them to your computer.
 
-First, on the server terminal, type `pwd` to display the path to you location. Then, in the other terminal window which is on your local machine, type the following command (replace *username* with your uio username (group 6-10 use test02 instead of test01) and replace *path/to/fastq/file* with the output from `pwd`):    
+<!--
+(you also did this in [Module 5](https://github.com/BIOS3010/Module-5-multiple-alignment#533-moving-files-from-an-external-server-to-your-own-computer)).-->
+<!-- Now changed as we need to go through login.uio.no -->
+
+If you have GitBash, or you have a Mac or Linux machine, you need to open a new terminal window. In the newly opened terminal window you will be on your local computer/laptop (!).
+Navigate to, or create, an appropriate folder to store the files you will download today, and in the coming weeks.  
+
+First, on the *server* terminal, type `pwd` to display the path to you location and `ls` to find the name of the file(s) to copy. Then, in the other terminal window which is on *your local machine*, type the following command (replace *username* with your uio username (group 6-10 use test02 instead of test01) and replace *path/to/fastq/file* with the output from `pwd`):    
 
 ```bash
-scp username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html .
+scp -J username@login.uio.no username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html .
 ```
 
-Type your UiO password. You should see something like this:  
+NOTES
+* The command has both `login.uio.no` and the `itf-appn-test` servers as we need to go through the first one to get access to the second one.
+* The dot `.` at the end indicates 'the current folder' as destination.
 
-<img src="/images/scp.png">  
+Type your UiO password.
 
-<br>  
+Double click the two `.html` files to open them in a web browser. You should see something like this:
 
-Double click the two html files to open them in a web browser. You should see something like this:
-
-<img src="/images/fastqc.png">   
+<img src="/images/fastqc.png"> <br>   
 
 Not all the information here is relevant for us today. But look at the information in "Basic Statistics", "Per base sequence quality" and "Adapter Content" and answer the following questions:
 
@@ -61,21 +69,23 @@ Not all the information here is relevant for us today. But look at the informati
 
 ## Remove adapters and low quality bases  
 
-The next thing we need to do is to remove sequencing adapters and low quality bases. We will use a program called [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) for this task. Run the following command (it's long so you can copy and paste. Copy all lines together. **But change the names of the input files.**):
+The next thing we need to do is to remove sequencing adapters and low quality bases. We will use a program called [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) for this task. Run the following command (it's long so you can copy and paste. Copy all lines together):
 
 ```bash
-trimmomatic PE SRR14253446_1.fastq SRR14253446_2.fastq \
-SRR14253446_1_trimmed.fastq SRR14253446_1_unpaired.fastq \
-SRR14253446_2_trimmed.fastq SRR14253446_2_unpaired.fastq \
-ILLUMINACLIP:$HOME/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/TruSeq3-PE.fa:2:30:10 \
+java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.39.jar PE TX-UTA-000336_L001_R1.fastq TX-UTA-000336_L001_R2.fastq \
+TX-UTA-000336_L001_R1_trimmed.fastq TX-UTA-000336_L001_R1_unpaired.fastq \
+TX-UTA-000336_L001_R2_trimmed.fastq TX-UTA-000336_L001_R2_unpaired.fastq \
+ILLUMINACLIP:/storage/software/software/Trimmomatic/0.39-Java-11/adapters/TruSeq3-PE.fa:2:30:10 \
 SLIDINGWINDOW:4:20 \
 MINLEN:36
 ```
 
-`PE` tells Trimmomatic that we have paired reads. Then we specify the two input fastq files, with the names of the corresponding trimmed paired and unpaired reads (if an entire read is removed from one of the files, then the corresponding read pair in the other file will be put into the "unpaired" files).  
-`ILLUMINACLIP` specifies how adapters will be removed.  
-`SLIDINGWINDOW:4:20` means that Trimmomatic will use a window of 4 bases and cut the read when the average base quality drops below 20.  
-`MINLEN:36` indicates that only reads longer than 36 bp after adapters and low quality bases are removed will be saved.  
+* `PE` tells Trimmomatic that we have paired reads.
+* Then we specify the two input fastq files
+* next we tell the program what file names to use for the trimmed paired and unpaired reads (if an entire read is removed from one of the files, then the corresponding read pair in the other file will be put into the "unpaired" files).  
+* `ILLUMINACLIP` specifies how adapters will be removed.  
+* `SLIDINGWINDOW:4:20` means that Trimmomatic will use a window of 4 bases and cut the read when the average base quality drops below 20.  
+* `MINLEN:36` indicates that only reads longer than 36 bp after adapters and low quality bases are removed will be saved.  
 
 Trimmomatic will print some information about the run to the screen.
 ```diff
