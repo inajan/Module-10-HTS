@@ -105,6 +105,7 @@ Answer the following questions:
 ! Do they have the same lengths as before trimming? If not, why?
 ! What has happened to the distribution of quality scores compared to before Trimmomatic?
 ! Are there any adapters present?
+! Why did we do this trimming step?
 ```
 
 [Back to top](#contents)
