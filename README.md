@@ -2,9 +2,7 @@
 
 ## Logging in to the server and installing software
 
-* Go to [these exercises](00-Get_started.md), and follow the steps.
-  * **It's a good idea to do this before the computer lab**
-  * If you have a Windows machine you will need to install either GitBash or Putty. This is described in the document.  
+* Go to [these exercises](00-Get_started.md), and follow the steps. **It's a good idea to do this before the computer lab**
 
 ## Download sequencing data
 
