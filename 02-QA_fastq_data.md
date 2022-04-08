@@ -40,7 +40,7 @@ Navigate to, or create, an appropriate folder to store the files you will downlo
 First, on the *server* terminal, type `pwd` to display the path to you location and `ls` to find the name of the file(s) to copy. Then, in the other terminal window which is on *your local machine*, type the following command (replace *username* with your uio username (group 6-10 use test02 instead of test01) and replace *path/to/fastq/file* with the output from `pwd`):    
 
 ```bash
-scp -J username@login.uio.no username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html .
+scp -J username@login.uio.no ´username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html .
 ```
 
 NOTES
@@ -59,7 +59,7 @@ Not all the information here is relevant for us today. But look at the informati
 ! How many sequences/reads are in your file? Is this what you expected?
 ! How long are they?
 ! Briefly describe the distribution of quality scores. Is the quality equally good along the entire sequence? Are there any differences in quality between pair 1 and pair 2 reads?
-! Are there any sequen adapters present?
+! Are there any sequencing adapters present?
 ! What are sequencing adapters and how did they get into your data?
 ```
 
