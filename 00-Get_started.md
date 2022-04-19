@@ -1,7 +1,6 @@
 ## Contents
 - [Logging on to the server](#logging-on-to-the-server)
 - [Installing and using software on a Linux system](#installing-and-using-software-on-a-linux-system)
-- [Installing and using software on a Linux system](#installing-and-using-software-on-a-Linux-system)
 
 
 ## Logging on to the server
