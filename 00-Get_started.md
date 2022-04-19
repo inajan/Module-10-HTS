@@ -42,8 +42,8 @@ You should see a message `Welcome to login.uio.no!`
 
 Once you are logged in to `login.uio.no`, you can log in to the analysis server:
 
-* **group 1-5** do this: `ssh username@itf-appn-test01.hpc.uio.no`
-* **group 6-10** do this `ssh username@itf-appn-test02.hpc.uio.no`
+* **odd-numbered groups (1, 3, 5, ...)** do this: `ssh username@itf-appn-test01.hpc.uio.no`
+* **even-numbered groups (2, 4, 6, ...)** do this `ssh username@itf-appn-test02.hpc.uio.no`
 
 Again, write your password when asked for it.
 

@@ -37,7 +37,10 @@ FastQC will produce two types of files. `.html` files and `.zip` files. We only 
 If you have GitBash, or you have a Mac or Linux machine, you need to open a new terminal window. In the newly opened terminal window you will be on your local computer/laptop (!).
 Navigate to, or create, an appropriate folder to store the files you will download today, and in the coming weeks.  
 
-First, on the *server* terminal, type `pwd` to display the path to you location and `ls` to find the name of the file(s) to copy. Then, in the other terminal window which is on *your local machine*, type the following command (replace *username* with your uio username (group 6-10 use test02 instead of test01) and replace *path/to/fastq/file* with the output from `pwd`):    
+First, on the *server* terminal, type `pwd` to display the path to you location and `ls` to find the name of the file(s) to copy. Then, in the other terminal window which is on *your local machine*, type the following command
+* replace *username* with your uio username
+* even-numbered groups (2, 4, 6, ...) use test02 instead of test01
+* replace *path/to/fastq/file* with the output from `pwd`:    
 
 ```bash
 scp -J username@login.uio.no username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html .
