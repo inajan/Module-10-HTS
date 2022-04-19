@@ -1,7 +1,7 @@
 ## Contents
 - [Logging on to the server](#logging-on-to-the-server)
 - [Installing and using software on a Linux system](#installing-and-using-software-on-a-linux-system)
-- [Setting up your working environment](#setting-up-your-working-environment)
+- [Installing and using software on a Linux system](#installing-and-using-software-on-a-Linux-system)
 
 
 ## Logging on to the server
@@ -52,6 +52,7 @@ When you have logged on to the server, type the command `pwd`. You should see so
 <img src="/images/terminal_2.png" width="500" height="300"> <p>  
 
 [Back to top](#contents)
+
 
 ## Installing and using software on a Linux system
 Installing software on a Linux server like the ones we are using in this class can sometimes be difficult. Many programs have "dependencies", other programs or libraries, that needs to be installed in a specific way in order for the program to run properly. On the servers that we are using in this course there are many programs that have been pre-installed.
