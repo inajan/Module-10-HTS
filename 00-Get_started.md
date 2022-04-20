@@ -56,9 +56,9 @@ When you have logged on to the server, type the command `pwd`. You should see so
 ## Installing and using software on a Linux system
 Installing software on a Linux server like the ones we are using in this class can sometimes be difficult. Many programs have "dependencies", other programs or libraries, that needs to be installed in a specific way in order for the program to run properly. On the servers that we are using in this course there are many programs that have been pre-installed.
 
-* The command `module avail` will give you a list of all pre-installed software. This list is very long:
-  * to browser through, use the spacebar
-  * to go back to the terminal, press the `q` key
+* The command `module avail` will give you a list of all pre-installed software. This list is very long. If only the first few are listed (you do not see the prompt (`$`) at the bottom):
+  * to browse through, use the spacebar
+  * to go back to the terminal prompt, press the `q` key
 * To activate a specific program, run `module load software_name/version`
 
 For the rest of the HTS module, we will use `fastqc` and `trimmomatic`. Here, we will only test that you can load the corresponding modules and test the progam.
