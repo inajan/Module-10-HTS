@@ -43,12 +43,13 @@ First, on the *server* terminal, type `pwd` to display the path to you location 
 * replace *path/to/fastq/file* with the output from `pwd`:    
 
 ```bash
-scp -J username@login.uio.no username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html .
+scp -J username@login.uio.no 'username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html' .
 ```
 
 NOTES
 * The command has both `login.uio.no` and the `itf-appn-test` servers as we need to go through the first one to get access to the second one.
 * The dot `.` at the end indicates 'the current folder' as destination.
+*  The quotation marks around `username@itf-appn-test01.hpc.uio.no:path/to/fastq/file/*.html` are needed on some operating systems to make sure the dilcard expnasion `*` works.
 
 Type your UiO password.
 

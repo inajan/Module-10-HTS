@@ -45,6 +45,15 @@ Once you are logged in to `login.uio.no`, you can log in to the analysis server:
 * **odd-numbered groups (1, 3, 5, ...)** do this: `ssh username@itf-appn-test01.hpc.uio.no`
 * **even-numbered groups (2, 4, 6, ...)** do this `ssh username@itf-appn-test02.hpc.uio.no`
 
+You may get a message like this:
+
+```
+The authenticity of host ... can't be established.
+...
+Are you sure you want to continue connecting (yes/no)? yes
+```
+Type 'yes' and press enter.
+
 Again, write your password when asked for it.
 
 When you have logged on to the server, type the command `pwd`. You should see something like this
