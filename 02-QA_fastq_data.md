@@ -63,7 +63,7 @@ Not all the information here is relevant for us today. But look at the informati
 ! How many sequences/reads are in your file? Is this what you expected?
 ! How long are they?
 ! Briefly describe the distribution of quality scores. Is the quality equally good along the entire sequence? Are there any differences in quality between pair 1 and pair 2 reads?
-! Are there any sequen adapters present?
+! Are there any sequencing adapters present?
 ! What are sequencing adapters and how did they get into your data?
 ```
 
